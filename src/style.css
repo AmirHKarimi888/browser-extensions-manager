@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  @apply h-screen w-full bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] bg-no-repeat dark:h-screen dark:from-[#040918] dark:to-[#091540];
+}
