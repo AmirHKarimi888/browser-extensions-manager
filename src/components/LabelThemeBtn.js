@@ -32,9 +32,9 @@ class LabelThemeBtn extends Main {
     render() {
         setTimeout(() => this.handler());
         return `
-        <div id="themeBtn" class="rounded-lg p-2 cursor-pointer bg-[#edededff] dark:bg-[#2f364bff] hover:bg-[#c7c7c7ff] hover:dark:bg-[#545969ff] duration-100">
+        <button id="themeBtn" class="btn-focus rounded-lg p-2 cursor-pointer bg-[#edededff] dark:bg-[#2f364bff] hover:bg-[#c7c7c7ff] hover:dark:bg-[#545969ff] duration-100">
           <img src="./src/assets/images/icon-moon.svg" />
-        </div>
+        </button>
         `
     }
 }
