@@ -1,6 +1,7 @@
 import store from "../store";
 import Card from "./Card";
 import Main from "./Main";
+import Spinner from "./Spinner";
 
 class Cards extends Main {
 
@@ -23,7 +24,11 @@ class Cards extends Main {
             return `${Card.render({ extension: extension })}`
         })
         .join("") :
-        null
+        `
+        <div class="max-[376px]:col-span-1 max-[651px]:col-span-2 min-[651px]:col-span-3 w-full mt-20 grid justify-center items-center">
+          ${Spinner.render()}
+        </div>
+        `
         }
       </ul>`
     }

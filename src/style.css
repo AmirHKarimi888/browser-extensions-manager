@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-  @apply h-screen w-full bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] bg-no-repeat dark:h-screen dark:from-[#040918] dark:to-[#091540];
+  @apply w-full h-full min-h-screen bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] bg-no-repeat dark:from-[#040918] dark:to-[#091540];
 }
 
 .btn-focus {
@@ -16,4 +16,8 @@ body {
 
 .filter-btn-active {
   @apply focus:outline-1 bg-[#c7221aff] border-0 text-[#fbfdfeff] hover:text-[#edededff] dark:text-[#040918] dark:hover:text-[#040918] dark:focus:bg-[#c7221aff] hover:bg-[#de473fff];
+}
+
+.remove-btn {
+  @apply px-4 py-1 cursor-pointer rounded-full bg-[#fbfdfe] dark:bg-[#212636ff] border border-gray-300 dark:border-gray-700 dark:focus:bg-[#545969ff] hover:bg-[#c7221aff] hover:text-[#fbfdfeff] dark:hover:text-[#040918] hover:border-[#c7221aff] duration-200;
 }
