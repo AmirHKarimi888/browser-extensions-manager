@@ -8,10 +8,10 @@ class LabelThemeBtn extends Main {
 
         if (localStorage.getItem("theme") === "light") {
             this.select("html").classList.remove("dark");
-            this.select("#themeBtn img").src = "./src/assets/images/icon-moon.svg";
+            this.select("#themeBtn img").src = "./assets/images/icon-moon.svg";
         } else {
             this.select("html").classList.add("dark");
-            this.select("#themeBtn img").src = "./src/assets/images/icon-sun.svg";
+            this.select("#themeBtn img").src = "./assets/images/icon-sun.svg";
         }
     }
 
@@ -20,14 +20,14 @@ class LabelThemeBtn extends Main {
             if (localStorage.getItem("theme") === "light") {
                 localStorage.setItem("theme", "dark");
                 this.select("html").classList.add("dark");
-                this.select("#headerLabel").src = "./src/assets/images/logo-dark.svg";
-                this.select("#themeBtn img").src = "./src/assets/images/icon-sun.svg";
+                this.select("#headerLabel").src = "./assets/images/logo-dark.svg";
+                this.select("#themeBtn img").src = "./assets/images/icon-sun.svg";
 
             } else if (localStorage.getItem("theme") === "dark") {
                 localStorage.setItem("theme", "light");
                 this.select("html").classList.remove("dark");
-                this.select("#headerLabel").src = "./src/assets/images/logo.svg";
-                this.select("#themeBtn img").src = "./src/assets/images/icon-moon.svg";
+                this.select("#headerLabel").src = "./assets/images/logo.svg";
+                this.select("#themeBtn img").src = "./assets/images/icon-moon.svg";
             }
         })
     }
@@ -39,7 +39,7 @@ class LabelThemeBtn extends Main {
         });
         return `
         <button id="themeBtn" class="btn-focus rounded-lg p-2 cursor-pointer bg-[#edededff] dark:bg-[#2f364bff] hover:bg-[#c7c7c7ff] hover:dark:bg-[#545969ff] duration-100">
-          <img src="./src/assets/images/icon-moon.svg" />
+          <img src="./assets/images/icon-moon.svg" />
         </button>
         `
     }

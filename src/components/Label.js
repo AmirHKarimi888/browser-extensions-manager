@@ -5,9 +5,9 @@ class Label extends Main {
 
     initiate() {
         if (localStorage.getItem("theme") === "light") {
-            this.select("#headerLabel").src = "./src/assets/images/logo.svg";
+            this.select("#headerLabel").src = "./assets/images/logo.svg";
         } else {
-            this.select("#headerLabel").src = "./src/assets/images/logo-dark.svg";
+            this.select("#headerLabel").src = "./assets/images/logo-dark.svg";
         }
     }
     
@@ -16,7 +16,7 @@ class Label extends Main {
         return `
         <div class="w-full p-3 flex justify-between items-center bg-[#fbfdfe] dark:bg-[#212636ff] rounded-2xl shadow-sm dark:shadow-none dark:border">
           <div>
-            <img src="./src/assets/images/logo.svg" id="headerLabel" />
+            <img src="./assets/images/logo.svg" id="headerLabel" />
           </div>
 
           <div>

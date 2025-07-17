@@ -34,7 +34,7 @@ class Cards extends Main {
 
     #UI(extensions) {
         return `
-          <ul id="extensionCards" class="py-8 grid max-[376px]:grid-cols-1 max-[651px]:grid-cols-2 min-[651px]:grid-cols-3 gap-2">
+          <ul id="extensionCards" class="py-8 grid max-[570px]:grid-cols-1 max-[900px]:grid-cols-2 min-[901px]:grid-cols-3 gap-2">
             ${typeof extensions === "string" ?
                 JSON.parse(extensions).map((extension) => {
                     return `${Card.render({ extension: extension })}`
