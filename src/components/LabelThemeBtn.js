@@ -2,7 +2,7 @@ import Main from "./Main";
 
 class LabelThemeBtn extends Main {
 
-    handler() {
+    initiate() {
 
         "theme" in localStorage ? null : localStorage.setItem("theme", "light");
 
@@ -13,7 +13,9 @@ class LabelThemeBtn extends Main {
             this.select("html").classList.add("dark");
             this.select("#themeBtn img").src = "./src/assets/images/icon-sun.svg";
         }
+    }
 
+    handle() {
         this.select("#themeBtn").addEventListener("click", () => {
             if (localStorage.getItem("theme") === "light") {
                 localStorage.setItem("theme", "dark");
@@ -29,8 +31,12 @@ class LabelThemeBtn extends Main {
             }
         })
     }
+    
     render() {
-        setTimeout(() => this.handler());
+        setTimeout(() => {
+            this.initiate();
+            this.handle();
+        });
         return `
         <button id="themeBtn" class="btn-focus rounded-lg p-2 cursor-pointer bg-[#edededff] dark:bg-[#2f364bff] hover:bg-[#c7c7c7ff] hover:dark:bg-[#545969ff] duration-100">
           <img src="./src/assets/images/icon-moon.svg" />

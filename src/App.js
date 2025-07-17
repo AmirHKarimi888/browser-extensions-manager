@@ -8,8 +8,8 @@ class App {
         return document.querySelector(selector);
     }
 
-    handler() {
-      
+    handle() {
+
     }
     render() {
         const UI = `
